@@ -1,0 +1,88 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://grandma.gd" type="Script" id=1]
+[ext_resource path="res://animations/grandma_slide/slide0009.png" type="Texture" id=2]
+[ext_resource path="res://animations/grandma_slide/slide0010.png" type="Texture" id=3]
+[ext_resource path="res://animations/grandma_slide/slide0011.png" type="Texture" id=4]
+[ext_resource path="res://animations/grandma_slide/slide0012.png" type="Texture" id=5]
+[ext_resource path="res://animations/grandma_slide/slide0013.png" type="Texture" id=6]
+[ext_resource path="res://animations/grandma_slide/slide0014.png" type="Texture" id=7]
+[ext_resource path="res://animations/grandma_jump/jump0001.png" type="Texture" id=8]
+[ext_resource path="res://animations/grandma_push/grandma_jump_push0009.png" type="Texture" id=9]
+[ext_resource path="res://animations/grandma_push/grandma_jump_push0010.png" type="Texture" id=10]
+[ext_resource path="res://animations/grandma_push/grandma_jump_push0011.png" type="Texture" id=11]
+[ext_resource path="res://animations/grandma_push/grandma_jump_push0012.png" type="Texture" id=12]
+[ext_resource path="res://animations/grandma_push/grandma_jump_push0013.png" type="Texture" id=13]
+[ext_resource path="res://animations/grandma_slide/slide0001.png" type="Texture" id=14]
+[ext_resource path="res://animations/grandma_slide/slide0002.png" type="Texture" id=15]
+[ext_resource path="res://animations/grandma_slide/slide0003.png" type="Texture" id=16]
+[ext_resource path="res://animations/grandma_slide/slide0004.png" type="Texture" id=17]
+[ext_resource path="res://animations/grandma_slide/slide0005.png" type="Texture" id=18]
+[ext_resource path="res://animations/grandma_slide/slide0006.png" type="Texture" id=19]
+[ext_resource path="res://animations/grandma_slide/slide0007.png" type="Texture" id=20]
+[ext_resource path="res://animations/grandma_slide/slide0008.png" type="Texture" id=21]
+[ext_resource path="res://animations/grandma_jump/jump0002.png" type="Texture" id=22]
+[ext_resource path="res://animations/grandma_jump/jump0003.png" type="Texture" id=23]
+[ext_resource path="res://animations/grandma_jump/jump0004.png" type="Texture" id=24]
+[ext_resource path="res://animations/grandma_jump/jump0005.png" type="Texture" id=25]
+[ext_resource path="res://animations/grandma_jump/jump0006.png" type="Texture" id=26]
+[ext_resource path="res://animations/grandma_jump/jump0007.png" type="Texture" id=27]
+[ext_resource path="res://animations/grandma_jump/jump0008.png" type="Texture" id=28]
+[ext_resource path="res://animations/grandma_jump/jump0009.png" type="Texture" id=29]
+[ext_resource path="res://animations/grandma_jump/jump0010.png" type="Texture" id=30]
+[ext_resource path="res://animations/grandma_jump/jump0011.png" type="Texture" id=31]
+[ext_resource path="res://animations/grandma_jump/jump0012.png" type="Texture" id=32]
+[ext_resource path="res://animations/grandma_jump/jump0013.png" type="Texture" id=33]
+[ext_resource path="res://animations/grandma_jump/jump0014.png" type="Texture" id=34]
+[ext_resource path="res://animations/grandma_jump/jump0015.png" type="Texture" id=35]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "slide",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": false,
+"name": "jump_slide",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "jump",
+"speed": 15.0
+} ]
+
+[node name="grandma" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+offset = Vector2( 0, -175 )
+
+[node name="text" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -75.0
+margin_top = -150.0
+margin_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1

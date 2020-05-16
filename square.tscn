@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://square.gd" type="Script" id=1]
+[ext_resource path="res://explosion.tscn" type="PackedScene" id=2]
+
+[node name="square" type="Node2D" groups=[
+"square",
+]]
+script = ExtResource( 1 )
+color = Color( 0.243137, 0.709804, 0.623529, 1 )
+
+[node name="label" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -75.0
+rect_scale = Vector2( 2, 2 )
+align = 1
+valign = 1
+
+[node name="explosion" parent="." instance=ExtResource( 2 )]
+emitting = true
+
+[editable path="explosion"]
